@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h1>War of the Ring Map App!</h1>
+    <p>How to use: In the input search for the region, then the map will pointed out in the layout! </p>
+    <div class="searcher">
+      <form>
+        <div class="input">
+        <input type="text" id="search" name="search" placeholder="Search Here!" size="50"><span class="glyphicon glyphicon-search"></span>
+        </div><div class="button">
+        <button type="button" class="btn btn-success btn-md" id="submit" name="button">Search!</button>
+        <button type="button" class="btn btn-danger btn-md" id="erase" name="button-erase">Back to Normal!</button>
+        </div>
+      </form>
+      <div class="information">
+        <h3 class="info-text"></h3>
+      </div>
+    </div>
+    <div class="player">
+      <h2>Free Peoples Player</h2>
+    </div>
+    <div class="map">
+      <img src="WholeMap.jpg">
+    </div>
+    <div class="player-enemy">
+      <h2>Sauron Player</h2>
+    </div>
+  </body>
+  <style src="style.css"></style>
+  <script src="main.js"></script>
+</html>
