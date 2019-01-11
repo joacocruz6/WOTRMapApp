@@ -210,3 +210,71 @@ for(let i = 0; i<nations.southronEasterling.length;i++){
                 .buildRegion();
   regions.push(newRegion);
 }
+
+const searchRegion=function(input){
+  let text = document.querySelector(".info-text");
+  let box = document.querySelector(".info-display");
+  box.innerHTML = "";
+  text.innerHTML = "Information!";
+  let searchText = input.toLowerCase()
+  for(let i = 0; i<regions.length;i++){
+    if(regions[i].name === searchText){
+      let region = regions[i];
+      let table = document.createElement("table");
+      let tableBox = document.createElement("tr");
+      let elements = document.createElement("ul");
+      let nameElement = document.createElement("li")
+      let textName = document.createTextNode("Name: "+region.name);
+      nameElement.appendChild(textName);
+      elements.appendChild(nameElement);
+      let nationElement = document.createElement("li");
+      let textNation = document.createTextNode("Nation: "+region.nation);
+      nationElement.appendChild(textNation);
+      elements.appendChild(nationElement);
+      
+      let townElement = document.createElement("li");
+      let townText;
+      let fortElement = document.createElement("li");
+      let fortText;
+      let siegeElement = document.createElement("li");
+      let siegeText; 
+      if(region.town){
+        townText = document.createTextNode("Town: Yes");
+      }
+      else{
+        townText = document.createTextNode("Town: No");
+      }
+      if(region.fort){
+        fortText = document.createTextNode("Fort: Yes");
+      }
+      else{
+        fortText = document.createTextNode("Fort: No");
+      }
+      if(region.siege){
+        siegeText = document.createTextNode("Siege: Yes");
+      }
+      else{
+        siegeText = document.createTextNode("Siege: No");
+      }
+      townElement.appendChild(townText);
+      fortElement.appendChild(fortText);
+      siegeElement.appendChild(siegeText);
+      elements.appendChild(townElement);
+      elements.appendChild(fortElement);
+      elements.appendChild(siegeElement);
+      tableBox.appendChild(elements);
+      table.appendChild(tableBox);
+      box.appendChild(table);
+      return;
+    }
+  }
+  text.innerHTML = "";
+  box.innerHTML = "";
+}
+const eraseInput = function(){
+  let text = document.querySelector(".info-text");
+  let box = document.querySelector(".info-display");
+  text.innerHTML = "";
+  box.innerHTML = "";
+  return;
+}
