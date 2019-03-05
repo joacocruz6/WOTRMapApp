@@ -9,11 +9,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="main.js"></script>
 </head>
-
+<style>
+.jumbotron{
+  background-color: grey;
+  color: #ffffff;
+}
+.player-enemy{
+  background-color: red;
+  color: white;
+}
+</style>
 <body>
-  <h1>War of the Ring Map App!</h1>
-  <p>How to use: In the input search for the region, then the map will pointed out in the layout! </p>
-  <div class="searcher">
+  <div class="jumbotron text-center">
+    <h1 class="display-1">War of the Ring Map App!</h1>
+    <p class="lead">How to use: In the input search for the region, then the map will pointed out in that region! </p>
+  </div>
+  <div class="text-center searcher">
     <form>
       <div class="input">
         <input type="text" id="search" name="search" placeholder="Search Here!" size="50"><span class="glyphicon glyphicon-search"></span>
@@ -28,14 +39,14 @@
       <div class="info-display"></div>
     </div>
   </div>
-  <div class="player">
+  <div class="container-fluid bg-primary text-center player">
     <h2>Free Peoples Player</h2>
   </div>
-  <div class="map">
+  <div class="text-center map">
     <div class="pointer"></div>
-    <img class="imagen-mapa" src="imagenes/WholeMap.jpg">
+    <img class="img-rounded imagen-mapa" src="imagenes/WholeMap.jpg" alt="War of the ring map">
   </div>
-  <div class="player-enemy">
+  <div class="container-fluid text-white text-center player-enemy">
     <h2>Sauron Player</h2>
   </div>
 </body>
