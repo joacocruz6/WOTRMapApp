@@ -210,13 +210,23 @@ for(let i = 0; i<nations.southronEasterling.length;i++){
                 .buildRegion();
   regions.push(newRegion);
 }
-
+const loadImage = function(name){
+  let names = name.split(" ");
+  let imageName = "imagenes/map-";
+  for(let i = 0; i<names.length-1;i++){
+    imageName += names[i]+"-";
+  }
+  let file = imageName+names[names.length-1]+".jpg";
+  let imageElement = document.querySelector(".imagen-mapa");
+  imageElement.src = file;
+  return;
+}
 const searchRegion=function(input){
   let text = document.querySelector(".info-text");
   let box = document.querySelector(".info-display");
   box.innerHTML = "";
   text.innerHTML = "Information!";
-  let searchText = input.toLowerCase()
+  let searchText = input.toLowerCase().trim();
   for(let i = 0; i<regions.length;i++){
     if(regions[i].name === searchText){
       let region = regions[i];
@@ -265,15 +275,20 @@ const searchRegion=function(input){
       tableBox.appendChild(elements);
       table.appendChild(tableBox);
       box.appendChild(table);
+      loadImage(regions[i].name);
       return;
     }
   }
+  let image = document.querySelector(".imagen-mapa");
   text.innerHTML = "";
   box.innerHTML = "";
+  image.src = "imagenes/WholeMap.jpg";
 }
 const eraseInput = function(){
   let text = document.querySelector(".info-text");
   let box = document.querySelector(".info-display");
+  let image = document.querySelector(".imagen-mapa");
+  image.src = "imagenes/WholeMap.jpg";
   text.innerHTML = "";
   box.innerHTML = "";
   return;
