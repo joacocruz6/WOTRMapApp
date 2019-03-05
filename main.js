@@ -210,6 +210,11 @@ for(let i = 0; i<nations.southronEasterling.length;i++){
                 .buildRegion();
   regions.push(newRegion);
 }
+/**
+ *  Change the image of the map to the corresponding one of the nation searched
+ * @param {string} name: its the name of the nation to load the image
+ * @returns void
+ */
 const loadImage = function(name){
   let names = name.split(" ");
   let imageName = "imagenes/map-";
@@ -221,7 +226,12 @@ const loadImage = function(name){
   imageElement.src = file;
   return;
 }
-const searchRegion=function(input){
+/**
+ * Search for the nation information on the objects created.
+ * @param {string} input the input text of the box to search
+ * @returns void sample
+ */
+const searchRegion = function(input){
   let text = document.querySelector(".info-text");
   let box = document.querySelector(".info-display");
   box.innerHTML = "";
@@ -279,11 +289,13 @@ const searchRegion=function(input){
       return;
     }
   }
-  let image = document.querySelector(".imagen-mapa");
-  text.innerHTML = "";
-  box.innerHTML = "";
-  image.src = "imagenes/WholeMap.jpg";
+  eraseInput();
+  return;
 }
+/**
+ * Erase the input of the file, going back to the normal image of the world.
+ * @returns nothing, change the html content of the page.
+ */
 const eraseInput = function(){
   let text = document.querySelector(".info-text");
   let box = document.querySelector(".info-display");
