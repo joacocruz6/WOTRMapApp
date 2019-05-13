@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+* {
+     box-sizing: border-box;
+}
 body{
      background-image: url('background/background-lord-of-the-rings.jpg');
+     background-size: 100%;
      font-family: 'Libre Franklin', sans-serif;
 }
 .player-enemy{
@@ -13,3 +17,4 @@ body{
 .info-me{
      font-style: italic;
 }
+   
