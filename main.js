@@ -237,7 +237,7 @@ const searchRegion = function(input){
   let box_info  = document.querySelector(".information");
   box_info.style.display = "";
   box.innerHTML = "";
-  text.innerHTML = "Information!";
+  text.innerHTML = "Information of the Search";
   let searchText = input.toLowerCase().trim();
   for(let i = 0; i<regions.length;i++){
     if(regions[i].name === searchText){
@@ -245,20 +245,31 @@ const searchRegion = function(input){
       let table = document.createElement("table");
       let tableBox = document.createElement("tr");
       let elements = document.createElement("ul");
-      let nameElement = document.createElement("li")
+      elements.setAttribute("class","list-group list-group-flush");
+      let nameElement = document.createElement("li");
+      nameElement.setAttribute("class","list-group-item");
+      nameElement.style="background-color: grey";
       let textName = document.createTextNode("Name: "+region.name);
       nameElement.appendChild(textName);
       elements.appendChild(nameElement);
       let nationElement = document.createElement("li");
+      nationElement.setAttribute("class","list-group-item");
+      nationElement.style="background-color: grey";
       let textNation = document.createTextNode("Nation: "+region.nation);
       nationElement.appendChild(textNation);
       elements.appendChild(nationElement);
       
       let townElement = document.createElement("li");
+      townElement.setAttribute("class","list-group-item");
+      townElement.style="background-color: grey";
       let townText;
       let fortElement = document.createElement("li");
+      fortElement.setAttribute("class","list-group-item");
+      fortElement.style="background-color: grey";
       let fortText;
       let siegeElement = document.createElement("li");
+      siegeElement.setAttribute("class","list-group-item");
+      siegeElement.style="background-color: grey";
       let siegeText; 
       if(region.town){
         townText = document.createTextNode("Town: Yes");
