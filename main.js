@@ -234,6 +234,8 @@ const loadImage = function(name){
 const searchRegion = function(input){
   let text = document.querySelector(".info-text");
   let box = document.querySelector(".info-display");
+  let box_info  = document.querySelector(".information");
+  box_info.style.display = "";
   box.innerHTML = "";
   text.innerHTML = "Information!";
   let searchText = input.toLowerCase().trim();
@@ -298,6 +300,8 @@ const searchRegion = function(input){
  */
 const eraseInput = function(){
   let text = document.querySelector(".info-text");
+  let box_info  = document.querySelector(".information");
+  box_info.style.display = "none";
   let box = document.querySelector(".info-display");
   let image = document.querySelector(".imagen-mapa");
   image.src = "imagenes/WholeMap.jpg";
