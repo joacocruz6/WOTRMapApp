@@ -4,13 +4,12 @@
 }
 body{
      background-image: url('background/background-lord-of-the-rings.jpg');
-     background-size: 100%;
      font-family: 'Libre Franklin', sans-serif;
 }
 .player-enemy{
      background-color: red;
-
 }
+
 .about-me{
      background-color: gray;
 }

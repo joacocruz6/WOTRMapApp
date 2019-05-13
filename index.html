@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark bg-dark" >
     <span class="navbar-brand" style="color:white">War of the Ring Map App</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,31 +56,31 @@
   <!--Search navigation-->
   <div class="container-fluid" style="padding-top:15px;">
     <div class="row">
-      <div class="col-4 col-sm-2 col-md-2"></div>
-      <div class="col-4 col-sm-4 col-md-4">
-        <div class="input">
-          <input type="text" id="search" name="search" placeholder="Search Here!" size="50"><span
-            class="glyphicon glyphicon-search"></span>
+      <div class="col-2 col-lg-4 col-sm-1 col-md-2"></div>
+      <div class="col-10 col-lg-5 col-sm-10 col-md-10">
+        <div class="input form-group row">
+          <input class="col-10 col-lg-10 col-sm-10 col-md-10" type="text" id="search" name="search" placeholder="Search Here!" >
         </div>
       </div>
+      <div class="col-4"></div>
     </div>
     <div class="row">
-      <div class="col-5 col-sm-3 col-md-3"></div>
-      <div class="col-5 col-sm-5 col-md-5">
+      <div class="col-1 col-lg-5 col-sm-3 col-md-3"></div>
+      <div class="col-11 col-lg-5 col-sm-9 col-md-5">
         <button type="button" class="btn btn-success btn-md" id="submit" name="button"
-          onclick='searchRegion(document.getElementById("search").value)'>Search!</button>
+          onclick='searchRegion(document.getElementById("search").value)'><i
+          class="fas fa-search"></i> Search</button>
 
-        <button type="button" class="btn btn-danger btn-md" id="erase" name="button-erase" onclick="eraseInput()">Back
-          to Normal!</button>
+        <button type="button" class="btn btn-danger btn-md" id="erase" name="button-erase" onclick="eraseInput()"><i class="fas fa-angle-double-left"></i> Back
+          to Normal</button>
       </div>
-      <div class="col-2 col-sm-2 col-md-2"></div>
     </div>
   </div>
   <!--Content displayed-->
   <div class="container" style="padding-top:15px;">
     <div class="row">
-      <div class="col-3"></div>
-      <div class="information col-6 col-sm-6 col-md-6" style="background-color: grey; color: black; border-radius:10px; display:none;">
+      <div class="col-3 col-lg-3 col-sm-3 col-md-3"></div>
+      <div class="information col-lg-6 col-sm-6 col-md-6" style="background-color: grey; color: black; border-radius:10px; display:none;">
         <h3 class="info-text"></h3>
         <div class="info-display"></div>
       </div>
@@ -90,19 +90,19 @@
   <!--Free Peoples player-->
   <div class="container-fluid" style="padding-top:15px;">
     <div class="row ">
-      <div class="col-2 col-sm-4 col-md-2"></div>
-      <div class="col-4 col-sm-8 col-md-8 bg-primary" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <div class="col-1 col-lg-4 col-sm-4 col-md-2"></div>
+      <div class="col-11 col-lg-4 col-sm-8 col-md-8 bg-primary" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
         <h2>Free Peoples Player</h2>
       </div>
     </div>
     <!--Map-->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-4 col-sm-2 col-md-2"></div>
-        <div class="col-4 col-sm-4 col-md-4" style="background-color: black;">
+        <div class=" col-lg-4 col-sm-5 col-md-2"></div>
+        <div class="col-12 col-lg-4 col-sm-8 col-md-8" style="background-color: black;">
         <div class="map">
           <div class="pointer"></div>
-          <img class="img-rounded imagen-mapa" src="imagenes/WholeMap.jpg" alt="War of the ring map">
+          <img class="img-fluid img-rounded imagen-mapa" src="imagenes/WholeMap.jpg" alt="War of the ring map">
         </div>
       </div>
       </div>
@@ -110,8 +110,8 @@
     <!--Sauron Player-->
     <div class="container-fluid" style="padding-bottom:15px;">
       <div class="row ">
-        <div class="col-4 col-sm-2 col-md-2"></div>
-        <div class="col-4 player-enemy col-sm-8 col-md-8" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+        <div class=" col-lg-4 col-sm-4 col-md-2"></div>
+        <div class="col-12 col-lg-4 player-enemy col-sm-8 col-md-8" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
           <h2 style="padding-left:60%">Sauron Player</h2>
         </div>
 
